@@ -7,7 +7,7 @@
 ## 질문 목록
 - HTML (작성 중)
 - CSS (작성 중)
-- JavaScript (작성 중)
+- [JavaScript (작성 중)](https://github.com/kuman514/FrontendCores/blob/main/javascript/readme.md)
 - [React](https://github.com/kuman514/FrontendCores/blob/main/react/readme.md)
 - TypeScript (작성 중)
 - 그 외 프론트엔드 개념 (작성 중)
