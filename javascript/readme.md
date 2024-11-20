@@ -122,8 +122,22 @@
 ## 함수
 
 ### function 키워드
+- `function functionName(...parameters) { ... }`
+- 호이스팅 가능.
+- 함수 내에서 `this`를 사용하려고 한다면, `.call()`, `.apply()`, `.bind()` 등등으로 this를 지정해야 함.
 
 ### 화살표 함수
+- `const functionName = (..parameters) => { ... };`
+- 기존 함수에 비해 문법이 간결하다.
+- `this`가 렉시컬 스코프로 고정됨.
+  - 이는 React 클래스 컴포넌트 등등에서 콜백 호출 시 this를 bind할 필요가 없어 매우 유용함.
+  - 예시
+    - 기존 함수: `<PseudoComponent onclick={function () {}.bind(this)}></PseudoComponent>`
+    - 화살표 함수: `<PseudoComponent onclick={() => {}}></PseudoComponent>`
+- 호이스팅 불가.
+- `=>`의 의미?
+  - 파라미터로 이루어진 좌항식을 우항식으로 평가하고 그 결과를 반환시키도록 하는 연산자이다.
+  - 우항식은 한 줄 또는 여러 줄이 될 수 있다.
 
 ## 비동기 처리
 
