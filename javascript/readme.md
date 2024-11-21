@@ -148,8 +148,26 @@
 ## 비동기 처리
 
 ### 콜백 활용
+- 비동기 처리 후 실행할 콜백 함수를 파라미터 등등으로 넘기는 방법.
+- 예시: setInterval, setTimeout, EventTarget.addEventListener 등등.
 
 ### Promise 객체 활용
+- Promise 객체를 활용한 비동기 처리 방법
+- new Promise((resolve, reject) => { ... })에서, resolve를 통해 성공적인 결과값을 받고, reject를 통해 예외를 던진다.
+- 여러 Promise를 다루는데 쓰이는 함수
+  - Promise.any
+    - 순회 가능한 객체에 대해 주어진 Promise 중 하나만 resolve되어도 될 때 쓰인다.
+    - resolve된 경우가 있을 때, 첫번째 resolve를 기준으로 Promise 결과값이 반환된다.
+    - 모든 Promise가 reject된 경우, reject된 Promise의 배열을 반환한다.
+  - Promise.all
+    - 순회 가능한 객체에 대해 주어진 모든 Promise가 resolve되어야 할 때 쓰인다.
+    - 모든 Promise가 resolve된 경우, resolve된 Promise의 결과값 배열을 반환한다.
+    - reject된 경우가 있을 때, 첫번째 reject를 기준으로 해당 Promise가 reject된다.
+  - Promise.allSettled
+    - 순회 가능한 객체에 대해 모든 Promise를 실행한 후, 각 Promise의 결과를 나타내는 객체를 반환한다.
+    - 성공 여부와 상관없는 비동기 작업들을 수행해야 하는 경우나 각 Promise들의 결과값을 알아야 할 때 유용하게 사용할 수 있다.
+  - Promise.race
+    - 순회 가능한 객체에 대해 주어진 Promise 중 가장 먼저 결과(resolve든 reject든 상관 없이)가 나온 Promise 결과값을 반환한다.
 
 ### async/await 활용
 
