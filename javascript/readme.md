@@ -169,7 +169,17 @@
   - Promise.race
     - 순회 가능한 객체에 대해 주어진 Promise 중 가장 먼저 결과(resolve든 reject든 상관 없이)가 나온 Promise 결과값을 반환한다.
 
-### async/await 활용
+### async, await 활용
+- Async Function 이벤트 루프를 통해 비동기적으로 작동하는 함수이다. 암시적으로 Promise를 사용하여 결과를 반환한다.
+- 문법이 간결하고, 구문이 기존 함수와 비슷하며, 콜백 지옥을 쉽게 벗어날 수 있는 비동기 처리 방법이다.
+- async 키워드
+  - 이 함수는 비동기적으로 실행된다는 것을 선언하는 키워드.
+  - 예시: async function asyncFunctionName(...) { ... } 또는 const asyncArrowFunctionName = async (...) => { ... }
+- await
+  - async 함수 안에서 어떤 비동기 로직이 완료될 때까지 기다리라는 키워드.
+  - 예시
+    - async function asyncFunctionName(...) { ... await asyncCodes(...); ... }
+    - async (...) => { ... await asyncCodes(...); ... }
 
 ## use strict
 
