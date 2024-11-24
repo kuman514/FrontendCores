@@ -220,6 +220,8 @@
 ## Polyfill
 
 ## 번들러
+- JavaScript, CSS, JPG, PNG 등, 여러 개로 나뉘어져 있고 서로 복잡하게 얽힌 각 모듈을 하나의 JavaScript 파일로 묶어주는 프로그램.
+- 예시: Webpack, Rollup, Vite, esbuild 등등.
 
 ## 커리 (curry)
 
@@ -232,6 +234,12 @@
 ## 문자열 관련 함수
 
 ## 객체 관련 함수
+- Object.entries
+  - 객체의 [key, value]들을 배열로 반환시킨다.
+- Object.keys
+  - 객체의 키들을 배열로 반환시킨다.
+- Object.values
+  - 객체의 값들을 배열로 반환시킨다.
 
 ## 배열 관련 함수
 
