@@ -203,7 +203,20 @@
     - async function asyncFunctionName(...) { ... await asyncCodes(...); ... }
     - async (...) => { ... await asyncCodes(...); ... }
 
-## use strict
+## Strict Mode
+- JavaScript를 Strict Mode로 동작하게 만드는 구문.
+- 전역 또는 함수 스코프 최상단에 `'use strict';` 구문을 삽입함으로써 동작한다.
+  - JavaScript 모듈은 기본적으로 Strict Mode로 동작한다.
+- Strict Mode로 동작할 경우
+  - 기존에는 조용히 무시되던 에러들이 Throw된다.
+  - ECMAScript에서 차기 정의될 문법의 사용을 금지한다.
+  - JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수를 바로잡는다.
+    - 글로벌 변수 생성을 금지한다.
+    - Write할 수 없는 전역 또는 프로퍼티, getter only 프로퍼티에 대해 새로 할당하는 것을 금지한다. 또한, 확장 불가능하도록 설정된 객체에 새 프로퍼티를 할당하는 것도 금지된다.
+    - unique한 함수 파라미터를 요구한다. (function funcName(a, a, c) { ... }에서 에러를 일으킨다)
+    - Object.prototype같이 삭제할 수 없는 프로퍼티를 삭제하려는 시도를 금지한다.
+    - 8진 구문 사용을 금지한다. (043 같은 8진법 수 금지)
+    - 원시 값에 값을 할당하는 것을 금지한다.
 
 ## 호스트 객체와 네이티브 객체의 차이
 - 호스트 객체
