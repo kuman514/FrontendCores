@@ -218,6 +218,7 @@
 ## document.onload, DOMContentLoaded
 
 ## Polyfill
+- 특정 기능을 지원하지 않는 브라우저에서도 동작할 수 있도록 개발자가 구현해놓은 기능에 대한 코드 조각이나 플러그인을 말함.
 
 ## 번들러
 - JavaScript, CSS, JPG, PNG 등, 여러 개로 나뉘어져 있고 서로 복잡하게 얽힌 각 모듈을 하나의 JavaScript 파일로 묶어주는 프로그램.
