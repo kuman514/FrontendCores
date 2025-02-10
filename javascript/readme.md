@@ -281,9 +281,39 @@
 
 ## 배열 관련 함수
 
-### call, bind, apply
-
-### forEach, map
+- Array.prototype.forEach((value, index) => ...)
+  - 배열의 각 엘리먼트에 대해 파라미터로 넘겨진 함수로 일괄적인 로직을 수행한다.
+  - 원본 배열을 변경하지 않으며, 결과값을 반환하지 않는다.
+- Array.prototype.map((value, index) => ...)
+  - 배열의 각 엘리먼트에 대해 파라미터로 넘겨진 함수로 일괄적인 로직을 수행하여 각 결과값을 도출시킨다.
+  - 원본 배열을 변경하지 않으며, 배열의 각 엘리먼트에 대한 파라미터 함수의 결과값의 배열을 반환한다.
+- Array.prototype.filter((value, index) => ...)
+  - 배열의 각 엘리먼트에 대해 파라미터로 넘겨진 함수로 일괄적인 로직을 수행하여 참일 경우에 해당하는 엘리먼트만 추려낸다.
+  - 원본 배열을 변경하지 않으며, 각 엘리먼트에 대한 파라미터 함수의 결과값이 참인 경우에 해당한 엘리먼트만으로 이루어진 배열을 반환한다.
+- Array.prototype.find((value, index) => ...)
+  - 배열의 각 엘리먼트에 대해 파라미터로 넘겨진 함수의 결과값이 참인 엘리먼트를 찾는 함수.
+  - 원본 배열을 변경하지 않으며, 각 엘리먼트에 대한 파라미터 함수의 결과값이 참인 가장 첫 번째 엘리먼트를 반환한다.
+- Array.prototype.findIndex((value, index) => ...)
+  - 배열의 각 엘리먼트에 대해 파라미터로 넘겨진 함수의 결과값이 참인 엘리먼트의 인덱스값을 찾는 함수.
+  - 원본 배열을 변경하지 않으며, 각 엘리먼트에 대한 파라미터 함수의 결과값이 참인 가장 첫 번째 엘리먼트의 인덱스값을 반환한다.
+- Array.prototype.slice(start, end)
+  - 배열의 특정 구간만 추출하는 함수.
+  - 원본 배열을 변경하지 않으며, [start, end) 범위에 해당하는 엘리먼트들로 이루어진 배열을 반환한다.
+- Array.prototype.splice(start, deleteCount, ...items)
+  - 원본 배열을 변경하며, start번째부터 deleteCount개만큼 삭제되고 그 자리에 items가 추가된 배열을 반환한다.
+- Array.prototype.sort((lhs, rhs) => ...)
+  - 원본 배열을 변경하며, 파라미터 함수에 따라 정렬이 완료된 배열을 반환한다.
+- Array.prototype.reduce((acc, value) => ..., init)
+  - 원본 배열을 변경하지 않으며, init 값으로 시작하여 각 엘리먼트에 대한 파라미터 함수의 최종 누적 결과값을 반환한다.
+- Array.prototype.includes(searchElement, start)
+  - 배열에서 특정 엘리먼트가 존재하는지 확인하는 함수.
+  - 원본 배열을 변경하지 않으며, start부터 시작하여 searchElement가 있는지 여부를 반환한다.
+- Array.prototype.shift()
+  - 원본 배열을 변경하며, 배열의 맨 앞에 있었던 엘리먼트를 반환한다.
+- Array.prototype.pop()
+  - 원본 배열을 변경하며, 배열의 맨 뒤에 있었던 엘리먼트를 반환한다.
+- Array.prototype.join(separator)
+  - 원본 배열을 변경하지 않으며, separator로 이어진 엘리먼트들의 문자열을 반환한다.
 
 ## Date 관련 함수
 
