@@ -216,6 +216,8 @@
   - 예: Date 객체 등등.
 
 ## JavaScript 개발에 쓰이는 디버깅 툴
+- console.log, console.debug, console.error 등등
+- Chromium 기반 브라우저(Google Chrome, Microsoft Edge 등등)의 Developer Tools (F12로 불러옴)
 
 ## document.onload, DOMContentLoaded
 
