@@ -259,6 +259,32 @@
   - HTTPS 사용.
 
 ## 제네레이터 함수
+- 제네레이터 함수 예시
+  ```javascript
+  function* generatorFuncName(...parameters) {
+    for (const parameter of parameters) {
+      yield parameter;
+    }
+    return 'finalValue';
+  }
+  ```
+- function 키워드 바로 뒤에 *를 붙임으로써 선언한다.
+- 함수 호출 시 generator 객체를 리턴한다. 함수의 로직은 아직 실행되지 않는다.
+- .next() 메소드 호출 시 yield 또는 return에 도달할 때 받은 value와 done 여부를 객체 형태로 받는다.
+  - yield로 받은 객체는 { value: ..., done: false }
+  - return으로 받은 객체는 { value: ..., done: true }
+- 함수의 로직이 종료된 이후에도 .next() 메소드를 호출할 수 있지만, 이 겅우 { done: true } 객체를 계속 받게 된다.
+- generator 객체는 순회를 할 수 있기(iterable이기) 때문에, for ... of문에 사용될 수 있다.
+  - 예시
+    ```javascript
+    function* generatorFuncName(...parameters) {}
+    const generator = genenratorFuncName(...);
+    for (const genElement of generator) {
+      ...
+    }
+    ```
+  - 이 때, yield로 받은 value만 순회하며, return으로 받은 value는 무시된다.
+
 
 ## 문자열 관련 함수
 
