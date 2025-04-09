@@ -345,4 +345,6 @@
   - 주어진 JSON 문자열을 토대로 JavaScript 객체나 값을 만든다.
   - 주어진 문자열이 JSON 문법에 맞지 않으면 에러가 발생한다.
 
-## Promise 객체 관련 함수
+## 값
+- Boolean(...)의 ...에 넣었을 때 false가 되는 값: 0, 0n, '', false, undefined, null
+- Number(...)의 ...에 넣었을 때 0이 되는 값: 0, 0n, '', false, [], null
