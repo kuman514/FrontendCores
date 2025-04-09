@@ -338,5 +338,11 @@
 ## Date 관련 함수
 
 ## JSON 관련 함수
+- JSON.stringify(value)
+  - 값의 모든 내용을 JSON 문자열로 만든다.
+  - 객체일 경우, 객체 안의 모든 내용까지 문자열로 만든다.
+- JSON.parse(text)
+  - 주어진 JSON 문자열을 토대로 JavaScript 객체나 값을 만든다.
+  - 주어진 문자열이 JSON 문법에 맞지 않으면 에러가 발생한다.
 
 ## Promise 객체 관련 함수
