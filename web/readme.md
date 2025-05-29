@@ -1,5 +1,20 @@
 # 웹 기초
 
+## 웹 페이지가 작동하는 과정: google.com을 주소창에 치면 어떤 일이 발생하나?
+1. URL 입력
+2. DNS 조회 후 google.com의 실제 IP 얻기
+3. google.com의 실제 IP와 TCP 3-way handshake
+4. https로 연결하므로, TLS handshake도 실시
+5. google.com에 HTTP GET 요청 전송
+6. google.com으로부터 HTML 수신
+7. 브라우저가 HTML을 파싱하고 렌더링을 시작함
+  - HTML 파싱하여 DOM 생성
+  - 이후 CSS 발견 시 CSS도 받아 CSSOM 생성
+  - (그 외에도 추가적인 리소스 발견 시 google.com에 요청하여 받아옴)
+  - DOM과 CSSOM을 합쳐 렌더 트리 생성
+  - 박스 모델 생성
+  - 실제 화면으로 페인팅
+
 ## HTTP 상태 코드 (HTTP Status Code)
 - 응답 코드란?
   - 통신의 결과를 나타내는 코드.
