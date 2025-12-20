@@ -11,5 +11,5 @@
 - [JavaScript (작성 중)](https://github.com/kuman514/FrontendCores/blob/main/javascript/readme.md)
 - [React](https://github.com/kuman514/FrontendCores/blob/main/react/readme.md)
 - TypeScript (작성 중)
-- React Native (작성 중)
+- [React Native](https://github.com/kuman514/FrontendCores/blob/main/react-native/readme.md)
 - 그 외 프론트엔드 개념 (작성 중)
