@@ -23,3 +23,7 @@
   - 동작
     - iOS와 Android는 UI 디자인 가이드라인과 하드웨어 동작 방식이 다르기 때문에, 같은 JavaScript 코드이더라도 동작 결과가 플랫폼에 따라 상이할 수 있다.
     - 이 때, `Platform.OS === '<OS 이름>' ? ... : ...` 등등의 코드를 삽입하여 플랫폼에 따라 로직을 나눌 수 있다.
+- 실행 환경
+  - React는 웹 브라우저의 JavaScript 엔진(에를 들어 V8 엔진)에서 작동한다.
+  - React Native는 JavaScript 계층과 네이티브 계층이 있는데, JavaScript 계층은 Hermes 엔진이 JavaScript 코드를 작동시키고, 실제 UI는 네이티브 계층에서 작동한다.
+    - JavaScript 계층과 네이티브 계층 간 통신은, New Architecture 이전까진 Bridge를 통한 JSON 직렬화를 통해 이루어졌지만, New Architecture 이후 Turbo Module / Fabric / Codegen 등등의 모듈을 통해 서로 직접 참조하는 방식으로 이루어진다.
